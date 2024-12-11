@@ -31,7 +31,7 @@ public class CarController {
         return "cars";
     }
 
-    @GetMapping("/count")
+    @GetMapping(params = "count")
     public String Car(@RequestParam ("count") int count, ModelMap model) {
         List<Car> cars=carService.countCars(count);
         model.addAttribute("cars",cars);
